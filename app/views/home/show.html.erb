@@ -1,0 +1,32 @@
+<div>
+  <%= form_for :content, url: contents_path do |f| %>
+    <%= f.label 'URL to scrape' %>
+    <%= f.text_field :href %>
+    <%= f.submit %>
+  <% end %>
+</div>
+<div>
+  <table>
+    <tr>
+      <td>
+        Href
+      </td>
+      <td>
+        Content
+      </td>
+    </tr>
+    <% @contents.each do |content| %>
+      <tr>
+        <td>
+          <%= content.href %>
+        </td>
+        <td>
+          <% JSON.parse(content.content).each do |c| %>
+            <%= c.html_safe %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%= paginate(@contents) %>
+</div>

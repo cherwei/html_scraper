@@ -1,0 +1,27 @@
+== Ruby version
+
+2.2.4
+
+== System dependencies
+
+nokogiri
+
+kaminari
+
+rspec-rails
+
+shoulda
+
+webmock
+
+== Configuration
+
+  bundle exec rails s
+
+== Database creation
+
+  bundle exec rake db:migrate
+
+== How to run the test suite
+
+  bundle exec rspec
