@@ -16,7 +16,7 @@ webmock
 
 == Configuration
 
-  bundle exec rails s
+  bundle install
 
 == Database creation
 
@@ -25,3 +25,7 @@ webmock
 == How to run the test suite
 
   bundle exec rspec
+  
+== How to run server
+
+  bundle exec rails s
